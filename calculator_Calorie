@@ -1,0 +1,40 @@
+# Java_1
+// Miti Naik
+//june 10 2015
+import java.util.Scanner;
+public class fatCalculator
+ {
+   public static void main(String[] args)
+   {
+      double caloriesFromfat, fatGrams, calories, percentage = 0.0;
+      Scanner keyboard = new Scanner(System.in);
+      
+      System.out.println(" Enter the amount of calories: ");
+      calories = keyboard.nextDouble();
+      
+      System.out.println(" Enter the amount of fatGrams: ");
+      fatGrams = keyboard.nextDouble();
+      
+      
+      caloriesFromfat = fatGrams * 9;
+      percentage = caloriesFromfat / calories;
+      
+    
+      
+      if (caloriesFromfat < (0.30 * calories))
+      {
+         System.out.println("The food is low in fat");
+      }
+      else if (caloriesFromfat > calories)
+      {
+         System.out.println(" The input is invalid");
+      }
+      System.out.println("The calories from fat is " + caloriesFromfat);
+      System.out.println(" The percentage of calories is " + percentage +"%");
+    
+      
+      
+      
+      
+   }
+}
