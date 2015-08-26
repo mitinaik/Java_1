@@ -1,0 +1,51 @@
+# Java_1
+//Miti Naik
+//july 10 2015
+
+public class Address
+{
+private String City;
+private String State;
+private String Zipcode;
+private String Country;
+
+//Constructor with no arguments
+public Address()
+   { City= State= Zipcode= Country=" ";
+
+   }
+   //Constructor with arguments
+   public Address(String Cty, String St, String Zip, String Cntry)
+   {
+   City = Cty;
+   State = St;
+   Zipcode = Zip;
+   Country = Cntry;
+     }
+   public void setCity(String Cty)
+   {City = Cty;}
+   public void setState(String St)
+   {State = St;}
+   public void setZipcode(String Zip)
+   { Zipcode = Zip;}
+   public void setCountry(String Cntry)
+   { Country = Cntry;}
+    public String getCity()
+   {return City;}
+   public String getState()
+   { return State;}
+   public String getZipcode()
+   { return Zipcode;}
+   public String getCountry()
+   { return Country;}
+  
+   
+public String toString()
+{
+   String str = (" : " + City + "," + State + "," + Zipcode +"," + Country);
+   return str;
+
+}
+
+
+}
