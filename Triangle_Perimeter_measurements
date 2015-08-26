@@ -1,0 +1,48 @@
+# Java_1
+//Miti Naik
+//june 13 2015
+
+import java.util.Scanner;
+public class Traingle_Perimeter
+{  
+   public static void main(String[] args)
+
+   {
+      double edge1, edge2,edge3, perimeter;
+      Scanner keyboard = new Scanner(System.in);
+      System.out.print(" Enter the measurement of edge1: ");
+      edge1 = keyboard.nextDouble();
+      
+      System.out.print(" Enter the measurement of edge2: ");
+      edge2 = keyboard.nextDouble();
+      
+      System.out.print(" Enter the measurement of edge3: ");
+      edge3 = keyboard.nextDouble();
+      perimeter = edge1 + edge2 + edge3; 
+      
+      if ((edge1 + edge2) > edge3)
+      {
+                  System.out.println(" The input is valid " );    
+       }
+      else if ((edge2 + edge3) > edge1)
+      {
+        
+        System.out.print("The input is valid");    
+      }
+      else if ((edge1 + edge3) > edge2)
+      {
+            System.out.print("The input is valid");    
+      }
+      else
+      {
+      System.out.print(" The input is inavlid");
+      
+      }
+      System.out.print(" The perimeter is: " + perimeter); 
+      
+
+      
+      
+      
+   }
+}
