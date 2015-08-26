@@ -1,0 +1,62 @@
+# Java_1
+// Miti Naik
+//june 10 2015
+import java.util.Scanner;
+public class GasStation
+{
+   public static void main(String[] args)
+   {
+      Scanner keyboard = new Scanner(System.in);
+      char gasType;
+      double gallons, cost= 0.0;
+      System.out.println(" Regular price is $ 2.50 per gallon");
+      System.out.println(" Premium price is $ 3.00 per gallon");
+      System.out.println(" Super price is $ 3.50 per gallon"); 
+      // ask users for input
+      System.out.println("R or r or For regular, P or p For premium, S or s For Super");
+      System.out.println(" Enter the gas type: ");
+      gasType = keyboard.next().charAt(0);
+      
+      System.out.println("Enter the amount of gallons: ");
+      gallons = keyboard.nextDouble();
+     
+     switch(gasType)
+     {
+      case 'R': case 'r':
+                        cost = 2.50 * gallons;
+                        break;
+      case 'P': case 'p':
+                        cost = 3.00 * gallons;
+                        break;
+      
+      
+      case 'S': case 's':
+                        cost = 3.50 * gallons;
+                        break;
+      default:
+                        System.out.println("you entered invalid gasType");
+      }                  
+      
+      /*
+      if (gasType == 'R' || gasType == 'r')
+      {
+         cost = 2.50 * gallons;
+      }
+      else if (gasType == 'P' || gasType == 'p')
+      {
+         cost = 3.00 * gallons;
+      }
+      else if (gasType == 'S' || gasType == 's')
+      {
+         cost = 3.50 * gallons;
+      }
+      else
+        {
+          System.out.println("Invalid input");
+        }
+        */
+        
+        System.out.println(" The cost is $" + cost);
+   }
+
+}
