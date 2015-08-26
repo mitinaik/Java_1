@@ -1,0 +1,67 @@
+# Java_1
+// Miti Naik
+//july 10 2015
+
+public class Student
+{
+private String FName, LName;
+private Address homeAddress;
+private int test1, test2, test3 = 0;
+private double average;
+
+
+public Student(String first, String last, Address home, int t1, int t2, int t3, double a)
+{
+FName = first;
+LName = last;
+homeAddress = home;
+test1 = t1;
+test2 = t2;
+test3 = t3;
+average = a;
+
+
+
+}
+public void setTestscore(int n, int score)
+{
+if (n == 1)
+test1 = score;
+else if (n == 2)
+test2 = score;
+else if ( n == 3)
+test3 = score;
+
+}
+public int getTestscore(int n)
+{
+ if (n == 1)
+{return test1;}
+
+ else if (n == 2)
+{ return test2;}
+ else if ( n == 3)
+ {return test3;}
+
+return n;
+}
+public double getaverage()
+{
+double average;
+average = (test1 + test2 + test3)/ 3.0;
+return average;
+}
+
+public String toString()
+{
+String result;
+result = FName + " " + LName + "\n";
+result += " Home Address is " + "\n" + homeAddress + "\n" ;
+result += " Test Scores are " + test1 + "," + test2 + "," + test3+ ".";
+result += "\n"+" Average is: " + average;
+return result; 
+
+
+}
+ 
+}
