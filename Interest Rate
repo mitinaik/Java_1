@@ -1,0 +1,56 @@
+# Java_1
+// Miti Naik
+// june 13 2015
+
+import java.util.Scanner;
+public class Intrest_Rate
+{
+   public static void main(String[] args)
+   
+   {  int years;
+      Scanner keyboard = new Scanner(System.in);
+      System.out.print("Enter the time on deposit of years: ");
+      years = keyboard.nextInt();
+      
+      double InterestRate = 0.0;
+      
+      if (years >= 5)
+      {
+         InterestRate = 0.0475;
+      }
+      else if (years < 5 || years >= 4)
+      {
+         InterestRate = 0.045;
+      }
+      else if (years <4 || years >= 3)
+      {
+         InterestRate = 0.040;
+      }
+      else if (years < 3 || years >= 2)
+      {
+         InterestRate = 0.035;
+      }
+      else if (years < 2 || years >= 1)
+      {
+         InterestRate = 0.030;
+      }
+      else if (years < 1)
+      {
+         InterestRate = 0.025;
+      }
+      else
+         {
+            System.out.println(" You entered invalid input");
+         }
+         
+         System.out.println(" The interst Rate is " + InterestRate);
+      
+      
+      
+
+      
+      
+      
+      
+   }
+}
