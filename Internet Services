@@ -1,0 +1,52 @@
+# Java_1
+// Miti Naik
+// june 9 2015
+
+import java.util.Scanner;
+public class internetServices
+{
+   public static void main(String[] args)
+   {
+      double hours, total = 0.0;
+      char Package;
+      Scanner keyboard = new Scanner(System.in);
+      System.out.println("Enter the Package Letter:  ");
+       Package  = keyboard.next().charAt(0);
+       
+       System.out.println(" Enter the number of hours: ");
+       hours = keyboard.nextDouble();
+       
+       if (Package == 'A' || Package == 'a')
+       {
+         if (hours <= 10 && hours >= 0)
+            total = 9.95;
+         else
+               total = 9.95 + (hours - 10) * 2.00;
+       }
+       else if (Package == 'B' || Package == 'b')
+       {
+         if (hours > 20)
+          total = 13.95 + (hours - 20) * 1.00;
+         else
+            total = 13.95;
+       }
+       else if (Package == 'C' || Package == 'c')
+       {
+        total = 19.95;
+       }
+       else
+       {
+         System.out.println(" Invalid ");
+       
+       }
+       System.out.println(" total bill $ " + total);
+       
+       
+      
+      
+      
+      
+      
+    }
+
+}
