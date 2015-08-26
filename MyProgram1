@@ -1,0 +1,59 @@
+# Java_1
+// Miti Naik
+//july 1 2015
+
+import java.util.Scanner;
+public class MyProgram1
+{
+   public static void main(String[] args)
+   {
+   int grades, size, studentsize;
+   double average = 0.0, total = 0.0;
+   char grade ;
+         Scanner keyboard = new Scanner(System.in);
+         
+   System.out.print(" Enter the size:");
+   size = keyboard.nextInt();
+   System.out.print(" Enter the student size: ");
+   studentsize = keyboard.nextInt();
+   
+   
+   for ( int counter  = 1 ; counter <= studentsize; counter++)
+   {
+       for (int i = 1; i <= size; i++)
+   {
+   System.out.print(" Enter a grade:" + i);
+      
+   grades = keyboard.nextInt();
+
+   total = total + grades;
+       
+   }
+   average = total/ size;
+ System.out.print(" Average is " + average);
+ 
+
+   }
+      
+ if (average >= 90 && average <= 100)
+
+    {
+   grade = 'A';
+   
+   }
+      if (average >= 80&& average <= 89)
+      {
+      grade = 'B';
+      }
+   if (average >= 70 && average <= 79)
+   {
+      grade = 'C';
+   }
+
+   if (average >= 90 && average <= 100)
+
+   {
+      grade = 'D';
+   }
+}
+}
