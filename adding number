@@ -1,0 +1,32 @@
+# Java_1
+//Miti Naik
+//june 15 2015
+
+
+import java.util.Scanner;
+public class number
+{
+   public static void main(String[] args)
+   {
+      int number, sum;
+      Scanner keyboard = new Scanner(System.in);
+      
+      System.out.print("Enter the number: ");
+      number = keyboard.nextInt();
+      
+      for ( number = 1; number ++;);
+      {
+         sum = number + number ++;
+         System.out.print(" The sum is " + sum);
+      }
+      
+      
+      
+      while(number < 0)
+      {
+         System.out.print("The input is invalid please try agian: ");
+         number = keyboard.nextInt();
+      }
+       
+   }
+}
