@@ -1,0 +1,154 @@
+# Java_1
+//Miti Naik
+//june 24 2015
+/*
+
+The bank has created a scheme where if the family of any has 2 acouunts with the same bank then they are offering a 25 dollar gift card. 
+Thia program reserves an array, and ask the users to eneter the family size.
+The bank has created a formula which calculates the users bank value according to the future value.
+This progarm ask users the following: years, family size, and future value. 
+The bank has given the users bonus for using that bank of 100 dollars.
+There are 5 conditions of different years. If years are less than 0 the input is invalid usig the validation test.
+If the years are greater than or equal to 1 and less than or equal to 3, the interest rate is 0.10.
+If the years are greater than or equal to 4 and less than or equal to 6, the interest rate is 0.20.
+If the years are greater than or equal to 7 and less than or equal to 9 ,the interest rate is 0.40.
+If the years are greater than or eequal to 10 and less than or equal to 13, the interest rate is 0.60.
+If the years are greater than or equal to 14 and less than or equal to 16, the intersret raet is 0.80.
+If the years are grater than 16, the interest rate is 1.00. 
+If the years are greater than 100, the system does not have any data avvailable, using the validation test. 
+The formula set by the bank is as follows: total amt = (futurevalue/(1+ interestrate)^ years).
+This programs return the follwing method individually: future value, and present value.
+The prgram displays the data with the method.
+
+
+
+
+
+
+
+*/
+
+import java.util.Scanner;
+public class Project
+{
+   public static void main(String[] args)
+   {
+   Scanner keyboard = new Scanner(System.in);
+   
+   double Futurevalue, InterestRate = 0.0,  presentvalue, finalamt, totalamt, totalbonus = 0.0, giftcard, totalgift= 0.0;
+   
+   double years;
+   final double bonus = 100.00;
+   Futurevalue = getvalue();
+   System.out.print(" Enter the number of years: ");
+   years = keyboard.nextInt();
+   
+   int[] Familysize = new int [2];
+   final int max = 7;
+   // ask users to enter the family size
+   // the array including the family size
+      
+   for ( int i = 1; i <= 0; i++)
+   {
+      System.out.print(" Enter the family size: ");
+      Familysize[1] = keyboard.nextInt();
+   }
+         giftcard = 25;
+      totalgift = totalgift + giftcard;
+      System.out.println(" The total giftcard is " + totalgift);
+
+  
+ // Three loops
+   while( years <= 0)
+   {
+      System.out.print("The input is invalid. Please enter it againg");
+      years = keyboard.nextDouble();
+   
+   }
+   while (years > 100)
+   {
+      System.out.print(" No data available please try again:");
+      years = keyboard.nextDouble();
+   }
+   for (int i = 1 ; i < 100; i++)
+   {   
+      
+         totalbonus = totalbonus + bonus;
+   }
+   // Five Selective statements
+   if( years >= 1 && years <= 3)
+   {
+   
+   InterestRate = 0.20;
+     } 
+ 
+  
+   if (years >= 4 && years <= 6)
+   {
+      InterestRate = 0.40;
+   } 
+   
+   if (years >= 7 && years <= 9) 
+   { InterestRate =  0.60; }
+   
+   if (years >= 10 && years <= 12)
+   { InterestRate = 0.80; }
+   if (years >= 13 && years <= 15)
+   { InterestRate = 1.00; }
+   if (years >= 16 && years < 100)
+   {  InterestRate = 1.10;}
+   presentvalue = presentvalue( InterestRate,  years);
+   finalamt = Futurevalue/presentvalue;
+   totalamt = finalamt + bonus;
+      
+    DisplayData(finalamt,totalamt);
+
+   }
+   // The three methods
+   // first method
+   public static double getvalue()
+   {
+   double v;
+   Scanner keyboard = new Scanner(System.in);
+   System.out.print(" Enter the future value:"); 
+   v = keyboard.nextDouble();
+   return v;
+   
+   
+   
+   }
+   // second method
+   
+   
+   public static double presentvalue(double InterestRate, double years)
+   {
+      double p;
+          
+      p = (Math.pow((1 + InterestRate), years));
+      return p;
+   }
+   
+   // third method
+      public static void DisplayData( double finalamt, double totalamt)
+   {
+      System.out.println(" The final amount is " + finalamt);
+      System.out.println(" The total amount with the bonus in your account is $" + totalamt);
+   
+   
+   }
+   
+   
+
+   
+   
+   
+   }
+   
+   
+   
+
+   
+
+     
+
+   
