@@ -1,0 +1,57 @@
+# Java_1
+//Miti Naik
+//june 20 2015
+
+import java.util.Scanner;
+
+public class Present_Value
+{
+   public static void main(String[] arsgs)
+
+   {
+      double AnnualIntrestRate, PresentValue = 0.0, years = 0.0;
+      final double FutureValue = 10000;
+      
+      AnnualIntrestRate = getrate();
+      years = getyears();
+      PresentValue = getpresentvalue(AnnualIntrestRate, years);
+      DisplayData(years, PresentValue, AnnualIntrestRate);
+   }
+   
+   public static double getrate()
+   {
+   Scanner keyboard = new Scanner(System.in);
+   double r;
+   System.out.print(" Please enter the annual rate: ");
+   r = keyboard.nextDouble();  
+   return r; 
+   
+   }
+   public static double getyears()
+   {
+      Scanner keyboard = new Scanner(System.in);
+      double n;
+      System.out.print(" Enter the number of years: ");
+      n = keyboard.nextDouble();
+      return n;
+     
+   
+   }
+   public static double getpresentvalue(double r, double n)
+   {double p;
+   final double FutureValue = 10000;
+   p = (FutureValue / Math.pow((1 + r), n));
+   return p;
+   }
+   public static void DisplayData( double n, double p, double r)
+   {
+      System.out.println(" The annualIntrestRate is " + r);
+      System.out.println(" The years are " + n);
+      System.out.println(" The present value is " + p);
+   
+   
+   }
+   
+   
+   
+}
