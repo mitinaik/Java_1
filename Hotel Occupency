@@ -1,0 +1,57 @@
+# Java_1
+//Miti Naik
+// june 20 2015
+
+import java.util.Scanner;
+
+public class Hotel_Ocuppency
+
+{
+   public static void main(String[] args)
+   
+   {  int floors, occupied, totalrooms = 0, rooms = 0  , vecant , totaloccupied = 0;
+      
+        double rate = 0.0;
+
+       Scanner keyboard = new Scanner(System.in);
+       System.out.print(" Enter the number of floors: ");
+       floors = keyboard.nextInt();
+       while (rooms <= 10)
+       {
+         System.out.println(" Invalid input");
+           rooms = keyboard.nextInt();
+         
+       }
+         while (rooms <= 10)
+       {
+         System.out.println(" Invalid input");
+           rooms = keyboard.nextInt();
+         
+       }
+
+
+       for (int i = 1; i <= floors; i++ )
+       { System.out.print(" The number of rooms on the floors " + i + ": ");
+         rooms = keyboard.nextInt();
+         totalrooms = totalrooms + rooms;
+         
+         System.out.print(" The number of rooms occupied: ");
+         occupied = keyboard.nextInt();
+         
+         totaloccupied = totaloccupied + occupied;
+         
+        }
+                          rate = (totaloccupied * 1.0 ) / totalrooms;
+             
+        vecant = totalrooms - totaloccupied;
+
+
+              
+        System.out.println(" The Total rooms the hotel has is " + totalrooms);
+        System.out.println(" The Total rooms that are occupied is " + totaloccupied);
+        System.out.println(" The number of rooms that are vecant is " + vecant);
+        System.out.println(" The occupency rate of the hotel is " + rate); 
+      
+   }
+   
+}
