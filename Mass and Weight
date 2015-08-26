@@ -1,0 +1,28 @@
+# Java_1
+// Miti Naik
+// june 8 2015
+import java.util.Scanner;
+public class Mass_and_Weight
+{
+   public static void main(String[] args)
+   {
+      double weight, mass;
+      Scanner keyboard = new Scanner(System.in);
+      System.out.println("Enter the mass: ");
+      mass = keyboard.nextDouble();
+      
+      weight = mass * 9.8;
+      if ( weight >= 1000)
+      {
+         System.out.println("The Obejct is too heavy");
+      }
+      else if (weight <= 10)
+      {
+         System.out.println("The object is too light");
+      }
+      else
+      {
+         System.out.println(" The weight is " + weight);
+      }
+   }
+}
